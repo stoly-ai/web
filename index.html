@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>X · 个人网站</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top">X</a>
+    <nav>
+      <a href="#about">关于</a>
+      <a href="#calculator">计算器</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="brand-mark">X</p>
+        <h1>简单一点，先把想法做出来。</h1>
+        <p class="lede">一个用纯 HTML、CSS 和 JS 搭的个人小站，附带一个可用的计算器。</p>
+        <a class="cta" href="#calculator">打开计算器</a>
+      </div>
+      <div class="hero-visual" aria-hidden="true"></div>
+    </section>
+
+    <section id="about" class="about">
+      <h2>关于</h2>
+      <p>我喜欢把东西做得干净、直接。这个页面没有框架，没有构建工具，打开就能用。</p>
+    </section>
+
+    <section id="calculator" class="calculator-section">
+      <h2>计算器</h2>
+      <p class="section-note">加减乘除，点一下就算。</p>
+
+      <div class="calculator" role="application" aria-label="计算器">
+        <div class="display" id="display" aria-live="polite">0</div>
+        <div class="keys">
+          <button type="button" class="key key-fn" data-action="clear">AC</button>
+          <button type="button" class="key key-fn" data-action="sign">±</button>
+          <button type="button" class="key key-fn" data-action="percent">%</button>
+          <button type="button" class="key key-op" data-operator="÷">÷</button>
+
+          <button type="button" class="key" data-digit="7">7</button>
+          <button type="button" class="key" data-digit="8">8</button>
+          <button type="button" class="key" data-digit="9">9</button>
+          <button type="button" class="key key-op" data-operator="×">×</button>
+
+          <button type="button" class="key" data-digit="4">4</button>
+          <button type="button" class="key" data-digit="5">5</button>
+          <button type="button" class="key" data-digit="6">6</button>
+          <button type="button" class="key key-op" data-operator="−">−</button>
+
+          <button type="button" class="key" data-digit="1">1</button>
+          <button type="button" class="key" data-digit="2">2</button>
+          <button type="button" class="key" data-digit="3">3</button>
+          <button type="button" class="key key-op" data-operator="+">+</button>
+
+          <button type="button" class="key key-zero" data-digit="0">0</button>
+          <button type="button" class="key" data-action="decimal">.</button>
+          <button type="button" class="key key-eq" data-action="equals">=</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> X</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
